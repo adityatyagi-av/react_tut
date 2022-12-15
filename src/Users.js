@@ -1,9 +1,12 @@
-function Users() {
-    return (
-      <div className="App">
-        <h1>ADITYA TYAGI</h1>
-      </div>
-    );
-  }
-  
-  export default Users;
+import Rests from './Rest'
+function User(){
+
+    return(
+    
+   <div>
+    <h1>hello</h1>
+    <Rests />
+   </div>
+    )
+}
+export default User;
