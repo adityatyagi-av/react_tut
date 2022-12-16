@@ -1,12 +1,10 @@
-import Rests from './Rest'
-function User(){
-
-    return(
-    
-   <div>
-    <h1>hello</h1>
-    <Rests />
-   </div>
-    )
+import React from 'react' 
+class User extends React.Component{
+    render()
+    {
+        return(
+            <h1>Hello from User</h1>
+        )
+    }
 }
 export default User;
