@@ -3,7 +3,12 @@ import './App.css';
 import User from './Users'
 import React from 'react';
 
+
 function App() {
+  function apple(){
+    alert("calling the function");
+   let heading1 = prompt("enter the new heading");
+  }
   function Rep() {
     return (
       <div>
@@ -13,7 +18,9 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1>Aditya Tyagi</h1>
+      <button onClick={()=>{alert("hey nate How's life");
+      apple()}}>Click me</button>
       <User />
      {Rep()}
 
