@@ -1,26 +1,31 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 import User from './Users'
-import React from 'react';
+
 
 
 function App() {
-  function apple(){
-    alert("calling the function");
-   let heading1 = prompt("enter the new heading");
+  const [data,setData]=useState();
+  const [num,setnum]=useState(0);
+  function updateData(){
+    setData(prompt("enter new heading"))
+  }
+  function updateNum(){
+    setnum(num+1);
   }
   function Rep() {
     return (
       <div>
-        <h1>Repost</h1>
+        <h1>{num}</h1>
+        <button onClick={updateNum}>Increase number</button>
       </div>
     )
   }
+  console.warn("_________________________")
   return (
     <div className="App">
-      <h1>Aditya Tyagi</h1>
-      <button onClick={()=>{alert("hey nate How's life");
-      apple()}}>Click me</button>
+      <h1>{data}</h1>
+      <button onClick={updateData}>Click me</button>
       <User />
      {Rep()}
 
