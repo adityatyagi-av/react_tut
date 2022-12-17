@@ -1,10 +1,25 @@
-import React from 'react' 
-class User extends React.Component{
-    render()
-    {
+import React from "react";
+
+export default class User extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            data: 0
+        }
+    }
+    updateit(){
+        this.setState({data:this.state.data+1})
+    }
+
+    render(){
+        console.warn("&^^^^^^^")
         return(
-            <h1>Hello from User</h1>
+        
+            <div>
+                <h1>{this.state.data}</h1>
+                <p>hey dude what's up</p>
+                <button onClick={()=>this.updateit()}>Update class data</button>
+            </div>
         )
     }
 }
-export default User;
